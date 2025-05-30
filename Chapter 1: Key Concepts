@@ -1,0 +1,112 @@
+# 🧪 Chapter 1: Key Concepts – The Language of Life (Decoded)
+
+## 🧬 What is a Genome?
+
+Your genome is the complete instruction manual for building and maintaining “you.”  
+Roughly 3.2 billion base pairs long, 20,000-odd genes, and a whole lot of non-coding content (yes, that infamous “junk DNA”—which turns out not to be junk at all).
+
+It’s not a blueprint. It’s more like a weather forecast written in probability and molecular chaos.
+
+## 🧬 Genotype vs. Phenotype
+
+- **Genotype** = your genetic makeup (what’s in the code)  
+- **Phenotype** = what actually shows up (height, eye color, disease risks)
+
+Your genome is not destiny. It's possibility—influenced by environment, randomness, and good old-fashioned luck.
+
+## 🧬 Variants, Not Errors
+
+Your genome is 99.9% identical to everyone else’s.  
+But that 0.1%? That's where things get interesting. And dangerous. And deeply personal.
+
+Key types of genetic variation:
+
+- **SNPs (Single Nucleotide Polymorphisms)** – One-letter changes. Common. Often harmless. Sometimes not.  
+- **INDELs (Insertions and Deletions)** – Can disrupt a gene like a typo in a recipe.  
+- **CNVs (Copy Number Variants)** – Repeated or missing chunks of DNA. Think of them as genetic stutters or stammers.
+
+## 🧬 The Central Dogma (with a Twist)
+
+You might remember this from high school:
+
+```text
+DNA → RNA → Protein
+🧬 Ethics & Data Sensitivity
+
+Your genetic data is not “just data.”
+It’s *you*. It’s your *family*. It’s your *potential future children*.
+Handle with precision, paranoia, and principle.
+
+* Don’t upload raw files to random sites.
+* Don’t treat predictions as prophecies.
+* Don’t interpret alone what you can’t emotionally or technically process.
+
+
+# 🧫 How Biology Becomes Data
+
+Your genome isn’t just sitting in a USB stick somewhere-it starts in your cells, wet and wild.
+To analyse it, we need to **digitise biology**, translating molecules into machine-readable code.
+This is the messy, magnificent pipeline that turns blood into bits.
+
+Let’s break it down.
+
+## 🧬 Step 1: Sample Collection – The Body Offers Its Code
+
+Usually saliva or blood. You give a biological sample. Simple, but sacred.
+That sample contains cells. Those cells contain DNA.
+Boom—you just handed over 3 billion letters of deeply personal code.
+
+## 🧪 Step 2: Sequencing – Reading the Letters
+
+The DNA is extracted, fragmented, and run through a sequencing machine.
+It doesn’t “read” DNA like a book—it shreds it and **reconstructs it digitally**, one chaotic puzzle piece at a time.
+
+* **Output**: `FASTQ` files – long text files filled with A, T, C, G, and confidence scores.
+* **Platforms**: Illumina (short-read), Oxford Nanopore (long-read, real-time).
+
+This is raw data. Beautiful. Noisy. Useless—until cleaned.
+
+## 🔍 Step 3: Alignment – Contextualising the Chaos
+
+Your raw reads are now aligned to a **reference genome** (like hg38), much like pinning shredded pages to a complete book and guessing where they go.
+
+* **Tools**: `BWA`, `Bowtie2` – open-source, peer-reviewed, hardcore.
+* **Output**: `BAM` files – aligned reads, binary format. Big files. Precision-coded.
+
+## 🧬 Step 4: Variant Calling – Spot the Difference
+
+Now the software scans your aligned genome and flags differences compared to the reference. These are your **variants**.
+
+* **Tools**: `GATK`, `FreeBayes`, `bcftools`
+* **Output**: `VCF` files (Variant Call Format) – lists of changes:
+
+  > “This base here? You’ve got a T, most people have a C.”
+
+Some are harmless. Some are interesting. A few might change your life.
+
+## 🧠 Step 5: Annotation – Making Sense of It All
+
+A raw variant is meaningless without context. We need to ask:
+
+* Is it in a gene?
+* Does it change a protein?
+* Has it been seen before in ClinVar, gnomAD, or 1000 Genomes?
+
+**Tools**: `SnpEff`, `VEP`, `ANNOVAR`
+
+Now we move from data to **hypothesis**. From probability to *maybe* insight.
+
+## ⚠️ Reality Check: This is Not a Straight Line
+
+In academia, pipelines break. Files corrupt. Databases change.
+You’ll hit bugs. You’ll misread results. That’s normal.
+
+This is science—**not a service**.
+You’re not buying answers. You’re building your own questions.
+
+
+```text
+Biological Sample → DNA Extraction → Sequencing → FASTQ  
+→ Alignment (BAM) → Variant Calling (VCF) → Annotation → Insight
+```
+
